@@ -1,0 +1,29 @@
+{
+  "name": "valorant-ui",
+  "version": "1.0.0",
+  "description": "<h1>Required</h1> <br>\r install:\r <br>\r 1.vs code\r <br>\r 2.node.js\r <br>\r -from vs code use terminal to check node.js versions and type the ff:\r <br>\r node -v\r <br>\r (version should be v16.16.0 or higher)\r <br>\r npm -v\r <br>\r (version should be 8.14.0 or higher)",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karaliusxd/Valorant-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Karaliusxd/Valorant-ui/issues"
+  },
+  "homepage": "https://github.com/Karaliusxd/Valorant-ui#readme",
+  "dependencies": {
+    "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.13",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.54.4"
+  }
+}
