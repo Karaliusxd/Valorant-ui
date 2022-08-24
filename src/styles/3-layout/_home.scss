@@ -1,0 +1,56 @@
+.hero {
+  @include breakpoint(large) {
+    margin: 0;
+  }
+  @include breakpoint-down(medium) {
+    overflow-x: hidden;
+  }
+
+  &__video {
+    @include breakpoint(large) {
+      position: relative;
+      width: 100%;
+      height: auto;
+      z-index: -1;
+    }
+    @include breakpoint-down(medium) {
+      position: relative;
+      height: 100vh;
+      transform: translate(-30%, 0%);
+      z-index: -1;
+    }
+  }
+
+  &__text {
+    @include breakpoint(large) {
+      position: absolute;
+      margin-left: 70px;
+      margin-top: 20vw;
+      width: 50%;
+      color: var(--description-color);
+    }
+    @include breakpoint-down(medium) {
+      position: absolute;
+      text-align: center;
+      margin: 30vh 20px;
+      color: var(--description-color);
+    }
+  }
+  &__title {
+    @include breakpoint(large) {
+      font-size: $title-desktop-L;
+    }
+    @include breakpoint-down(medium) {
+      font-size: $title-mobile-L;
+    }
+  }
+  &__description {
+    @include breakpoint(large) {
+      font-size: $description-desktop-L;
+    }
+    @include breakpoint-down(medium) {
+      margin: 0 10%;
+      font-size: $description-mobile-L;
+    }
+  }
+}

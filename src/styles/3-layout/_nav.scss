@@ -1,0 +1,210 @@
+.nav {
+  @include breakpoint(large) {
+  }
+  @include breakpoint-down(medium) {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+
+  &__overlay {
+    &.fade-in {
+      @include breakpoint(large) {
+      }
+      @include breakpoint-down(medium) {
+        display: block;
+        animation: fade-in 300ms ease-in-out forwards;
+      }
+    }
+    &.fade-out {
+      @include breakpoint(large) {
+      }
+      @include breakpoint-down(medium) {
+        display: block;
+        z-index: 100;
+        animation: fade-out 300ms ease-in-out forwards;
+      }
+    }
+    @include breakpoint(large) {
+      display: none;
+    }
+    @include breakpoint-down(medium) {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: hsl(0, 0%, 7%, 0.8);
+    }
+  }
+  &__menu {
+    @include breakpoint(large) {
+      display: none;
+    }
+    @include breakpoint-down(medium) {
+      position: fixed;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      width: 100%;
+      margin-top: 30px;
+      z-index: 1000;
+    }
+  }
+
+  &__menu-svg {
+    @include breakpoint(large) {
+      display: none;
+    }
+    @include breakpoint-down(medium) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
+      &.open {
+        .nav__menu-line1 {
+          @include breakpoint(large) {
+            display: none;
+          }
+          @include breakpoint-down(medium) {
+            transform: rotate(45deg);
+          }
+        }
+        .nav__menu-line2 {
+          @include breakpoint(large) {
+            display: none;
+          }
+          @include breakpoint-down(medium) {
+            opacity: 0;
+          }
+        }
+        .nav__menu-line3 {
+          @include breakpoint(large) {
+            display: none;
+          }
+          @include breakpoint-down(medium) {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__menu-line1 {
+    @include breakpoint(large) {
+      display: none;
+    }
+    @include breakpoint-down(medium) {
+      transition: all 300ms ease-in-out;
+      transform-origin: 5px 10px;
+    }
+  }
+  &__menu-line2 {
+    @include breakpoint(large) {
+      display: none;
+    }
+    @include breakpoint-down(medium) {
+      transition: all 300ms ease-in-out;
+    }
+  }
+  &__menu-line3 {
+    @include breakpoint(large) {
+      display: none;
+    }
+    @include breakpoint-down(medium) {
+      transform-origin: 5px 14px;
+      transition: all 300ms ease-in-out;
+    }
+  }
+  &__menu-img {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 50px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    @include breakpoint(large) {
+      display: none;
+    }
+    @include breakpoint-down(medium) {
+    }
+  }
+
+  &__links {
+    @include breakpoint(large) {
+      margin: 80px 0px 0px 160px;
+      position: fixed;
+      display: flex;
+      z-index: 999;
+    }
+    @include breakpoint-down(medium) {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-top: 100px;
+      width: 100%;
+    }
+  }
+  &__items {
+    @include breakpoint(large) {
+    }
+    @include breakpoint-down(medium) {
+      display: flex;
+      margin-bottom: 25px;
+      margin-right: 20px;
+      z-index: 1000;
+    }
+  }
+  &__img {
+    @include breakpoint(large) {
+    }
+    @include breakpoint-down(medium) {
+      width: 50px;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      background-color: var(--description-color);
+      border-radius: 50px;
+    }
+  }
+  &__text {
+    @include breakpoint(large) {
+      position: relative;
+      margin-right: 150px;
+      font-size: $nav-titles;
+      font-family: var(--description-font);
+      color: var(--description-color);
+
+      &:after {
+        content: "";
+        position: absolute;
+        background-color: var(--title-color);
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -2px;
+        transition: 0.3s;
+      }
+
+      &:hover:after {
+        width: 100%;
+      }
+      &:hover {
+        color: var(--title-color);
+      }
+    }
+    @include breakpoint-down(medium) {
+      margin-right: 20px;
+      align-self: center;
+      color: var(--description-color);
+    }
+  }
+}

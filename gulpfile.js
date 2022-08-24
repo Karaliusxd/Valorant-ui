@@ -1,11 +1,14 @@
-const { src, dest, watch, series } = require('gulp');
+const { src, dest, watch, series, } = require('gulp');
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
 
+
+
 // const sass = require('gulp-sass'); 
 var sass = require('gulp-sass')(require('sass'));//sass-css
+
 
 // Sass Task
 function scssTask(){
@@ -17,10 +20,11 @@ function scssTask(){
 
 // JavaScript Task
 function jsTask(){
-  return src('src/scripts/app.js', { sourcemaps: true })
+  return src('src/**/*.js', { sourcemaps: true })
     .pipe(terser())
     .pipe(dest('build/scripts', { sourcemaps: '.' }));
 }
+
 
 // Browsersync Tasks
 function browsersyncServe(cb){

@@ -1,0 +1,92 @@
+.footer {
+  @include breakpoint(large) {
+    margin: 64px 171px;
+    display: flex;
+    flex-direction: row;
+    color: var(--description-color);
+  }
+  @include breakpoint-down(medium) {
+    margin: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    color: var(--description-color);
+  }
+
+  &__container {
+    @include breakpoint(large) {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      margin-right: 160px;
+    }
+    @include breakpoint-down(medium) {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      margin-right: 160px;
+    }
+  }
+  &__title {
+    @include breakpoint(large) {
+      font-family: var(--title-font);
+      font-size: $title-desktop-S;
+    }
+    @include breakpoint-down(medium) {
+    }
+  }
+  &__links {
+    @include breakpoint(large) {
+      margin-bottom: 20px;
+    }
+    @include breakpoint-down(medium) {
+      margin-bottom: 20px;
+    }
+  }
+  &__items {
+    @include breakpoint(large) {
+      margin-right: 20px;
+    }
+    @include breakpoint-down(medium) {
+    }
+  }
+  &__text {
+    @include breakpoint(large) {
+      font-family: var(--description-font);
+      font-size: $description-desktop-L;
+    }
+    @include breakpoint-down(medium) {
+    }
+  }
+  &__flex {
+    @include breakpoint(large) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include breakpoint-down(medium) {
+    }
+  }
+  &__info {
+    @include breakpoint(large) {
+    }
+    @include breakpoint-down(medium) {
+      margin-top: 20px;
+    }
+  }
+  &__icons {
+    @include breakpoint(large) {
+      margin-top: 49px;
+    }
+    @include breakpoint-down(medium) {
+      margin-top: 49px;
+    }
+  }
+  &__selector {
+    @include breakpoint(large) {
+      margin-right: 38px;
+    }
+    @include breakpoint-down(medium) {
+      margin-right: 28px;
+    }
+  }
+}

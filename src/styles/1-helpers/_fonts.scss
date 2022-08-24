@@ -1,0 +1,16 @@
+:root {
+  --title-font: "bebas neue", serif;
+  --description-font: "uchen", serif;
+  --navmenu-font: "quicksand", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--title-font);
+}
+p {
+  font-family: var(--description-font);
+}

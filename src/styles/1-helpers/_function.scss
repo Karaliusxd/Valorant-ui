@@ -1,7 +1,41 @@
+@use "sass:math";
+
 // Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
-@function rem($pixels, $context: 16) {
-  @return (math.div($pixels, $context)) * 1rem;
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
 }
-@function em($pixels, $context: 16) {
-  @return (math.div($pixels, $context)) * 1em;
+
+$browser-context: 16;
+
+@function rem($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
 }
+//sample code using rem & em function
+
+/* h1 {
+  font-size: rem(30);
+} */
+
+//This code is equivalent to the ff code
+/* h1{
+  font-size: 1.875rem;
+}   
+*/

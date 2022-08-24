@@ -1,0 +1,63 @@
+/* Navbar */
+@keyframes hide-links {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.hide-links {
+  @include breakpoint(large) {
+    visibility: visible;
+  }
+  @include breakpoint-down(medium) {
+    visibility: hidden;
+    animation: hide-links 300ms ease-in-out forwards;
+  }
+}
+
+@keyframes show-links {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.show-links {
+  @include breakpoint(large) {
+    visibility: visible;
+    animation: show-links 0ms ease-in-out forwards;
+  }
+  @include breakpoint-down(medium) {
+    visibility: hidden;
+    animation: show-links 300ms ease-in-out forwards;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

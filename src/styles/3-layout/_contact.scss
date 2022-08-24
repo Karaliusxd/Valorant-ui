@@ -1,0 +1,77 @@
+.contact {
+  &__background {
+    @include breakpoint(large) {
+      position: relative;
+    }
+    @include breakpoint-down(medium) {
+      position: relative;
+      overflow-x: hidden;
+    }
+  }
+  &__img {
+    @include breakpoint(large) {
+      height: 100vh;
+      width: 100%;
+      background: no-repeat center center;
+      background-size: cover;
+    }
+    @include breakpoint-down(medium) {
+      height: 100vh;
+      width: auto;
+      background: no-repeat center center;
+      background-size: cover;
+      transform: translateX(-10%);
+    }
+  }
+
+  &__info {
+    @include breakpoint(large) {
+      width: 30%;
+      position: absolute;
+      top: 0;
+      margin-top: 250px;
+      margin-left: 120px;
+    }
+    @include breakpoint-down(medium) {
+      width: 50%;
+      position: absolute;
+      top: 0;
+      margin-top: 150px;
+      margin-left: 20px;
+    }
+  }
+
+  &__title {
+    @include breakpoint(large) {
+      color: var(--title-color);
+      font-size: $title-desktop-S;
+    }
+    @include breakpoint-down(medium) {
+    }
+  }
+  &__description {
+    @include breakpoint(large) {
+      font-size: $description-desktop-L;
+    }
+    @include breakpoint-down(medium) {
+    }
+  }
+  &__btn {
+    @include breakpoint(large) {
+      font-size: $btn-size;
+      padding: 14px 44px;
+      margin-top: 46px;
+      background-color: var(--bg-color);
+      font-family: var(--title-font);
+      color: var(--title-color);
+    }
+    @include breakpoint-down(medium) {
+      font-size: $btn-size;
+      padding: 14px 24px;
+      margin-top: 20px;
+      background-color: var(--bg-color);
+      font-family: var(--title-font);
+      color: var(--title-color);
+    }
+  }
+}
